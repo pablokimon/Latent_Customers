@@ -1,0 +1,11 @@
+*.pyc
+.idea
+.ipynb_checkpoints
+*.bak
+*.swp
+.DS_Store
+topics/
+wordclouds2.2.2019/
+tlogs/
+*.p
+*.pkl
