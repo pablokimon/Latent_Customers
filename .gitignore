@@ -7,5 +7,6 @@
 topics/
 wordclouds2.2.2019/
 tlogs/
+jsons/
 *.p
 *.pkl
