@@ -1,6 +1,8 @@
 # latent-customers
 
-
+<img src = "./img/TOPIC1.png">
+<img src = "./img/TOPIC1.png">
+<img src = "./img/TOPIC1.png">
                       Auto Report: DCL1   Entry: TLOG FILE
                  TRANSACTION SUMMARY LOG REPORT  - STORE  0004
 
