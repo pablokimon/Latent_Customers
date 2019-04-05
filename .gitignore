@@ -10,3 +10,4 @@ tlogs/
 jsons/
 *.p
 *.pkl
+data/

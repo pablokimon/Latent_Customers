@@ -86,9 +86,9 @@ for subdir, dirs, files in os.walk('./tlogs'):
 
 
 #if __name__ == '__main__':
-
-json_path ='./data/jsons/2017'
-tlog_path='./data/tlogs/2017'
+year=input('What year data would you like to process?')
+json_path ='./data/jsons/%s'% year
+tlog_path='./data/tlogs/%s'% year
 
 if not os.path.exists(tlog_path):
     print("Directory " , tlog_path ,  "Does not exist")
