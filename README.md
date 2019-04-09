@@ -4,10 +4,12 @@
 
 Rainbow Grocery is a 25,000 square foot Natural Food store that does about $1,000,000 in sale per week.
 They have been a fixture of San Francisco since 1975 and have a register system designed in the 80's.
-Rainbow is unique in that is vegetarian, maintains a selection of 30,000 items, with an emphasis on 
-fresh produce, 
-bulk ingredients (from oats to beans to spices to teas)
-extensive supplements and body care sections.
+Rainbow is unique in that is 
+* vegetarian, 
+* maintains a selection of 30,000 items, 
+*emphasis on fresh produce, 
+* bulk ingredients (from oats to beans and spices to teas)
+* extensive supplements and body care sections
 
 ## Discovering customer types from transactions without a loyalty program!
 Rainbow has no loyalty program as of Spring 2019.
