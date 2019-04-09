@@ -1,13 +1,21 @@
-# latent-customers
+# Reverse Engineering Shopping Lists 
+## 10,000,000 grocery baskets, 10 trips to the store.
+ 
 
 <img src = "./img/rgci/RGCI_logo_final_small.png" width="250" />
 
 Rainbow Grocery is a 25,000 square foot Natural Food store that does about $1,000,000 in sale per week.
 They have been a fixture of San Francisco since 1975 and have a register system designed in the 80's.
-Rainbow is unique in that is 
-* vegetarian, 
-* maintains a selection of 30,000 items, 
-*emphasis on fresh produce, 
+Rainbow Grocery doesn’t have a method to analyse their customers baskets.
+
+# The Problem: How can Rainbow Grocery analyse their customers without a loyalty program?
+
+Rainbow is unique in that it is: 
+* vegetarian 
+* maintains a selection of 30,000 items
+
+With an emphasis on:
+* fresh produce
 * bulk ingredients (from oats to beans and spices to teas)
 * extensive supplements and body care sections
 
