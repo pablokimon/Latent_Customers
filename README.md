@@ -35,16 +35,23 @@ Can we use data science to make sense of this stream of text and find the types 
 
 NMF is an unsupervised learning model that can be used to find topic similiarity between documents based on the words they contain. Treating each transaction as a document and each item's unique 13 character description as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
 
-# Step 1. Parse the Data
+## Step 1. Parse the Data
 
-Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formated text file.
+Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formated text file.  I also had to account for stray punctuation characters in the item descriptions.
 Writing the results into a json format allowed for them to be quickly read into a pandas dataframe.
 
-# Step 2. Prepare the Matrix
+## Step 2. Prepare the Item List and Dictionary
 
 The item data was extracted as a list of list which I iterated through, adding the item to a dictionary with a running count of the items, ultimately yielding a dictionary of all the items in the all the baskets, and their total count.  I developed a "stop words" list to remove common items which made basket similarites worse. Bag Credits and bottle deposits were linking too many baskets because they were present in many baskets but were not actual items that lend any insight into shopping habits.  
 Bananas were in 112832 of the 831284 baskets, roughly 1 in 8 baskets, or 13.5% of transactions and Hass Avocados were in 10% of baskets.
 Removing both of these items allowed a greater differentiation between baskets.
 
+## Step 3. Builing a Sparse Matrix
+
+Because I needed the items descriptions to remain entact at the entire 13-character string, I built my own vectorizer. Each time an iten was present in the basket, I added 1. If the value was negative (such as a voided item) I subtracted 1. Iterating through the lists of transactions and adding a dicitonary key for the row (transaction) and a tuple of the item and its count in the basket I built up a dictionary object which was then passed to a sparse matrix.
+
+## Step 4. Pass the Matrix to the NMF Model
+
+Just before passing the sparse matrix to the NMF model, I set any negative values to 0. After choosing a value for the number of components (topics) and maximum iterations I let the NMF work its magic.  I returned from the model the number of iterations the model used to achieve the number of components specified, the matrix W and H
 
 
