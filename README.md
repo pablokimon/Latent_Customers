@@ -1,14 +1,9 @@
 # Reverse Engineering Shopping Lists 
-## 10,000,000 grocery baskets, 10 trips to the store.
- 
+# The Problem: How can a grocery store analyze their customers without a loyalty program
 
-<img src = "./img/rgci/RGCI_logo_final_small.png" width="250" />
-
-Rainbow Grocery is a 25,000 square foot Natural Food store that does about $1,000,000 in sale per week.
+A 25,000 square foot Natural Food store that does about $1,000,000 in sale per week doesn’t have a method to analyse their customers baskets.
 They have been a fixture of San Francisco since 1975 and have a register system designed in the 80's.
-Rainbow Grocery doesn’t have a method to analyse their customers baskets.
 
-# The Problem: How can Rainbow Grocery analyse their customers without a loyalty program?
 
 Rainbow is unique in that it is: 
 * vegetarian 
