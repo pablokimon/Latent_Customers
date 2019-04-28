@@ -1,30 +1,27 @@
 # Reverse Engineering Shopping Lists 
-# The Problem: How can a grocery store analyze their customers without a loyalty program
+# The Problem: How can a grocery store analyze their customer's shopping without a loyalty program?
 
-A 25,000 square foot Natural Food store that does about $1,000,000 in sale per week doesn’t have a method to analyse their customers baskets.
+A large Bay-Area Natural Food store doesn’t have a method to analyze their customer's baskets.
 They have been a fixture of San Francisco since 1975 and have a register system designed in the 80's.
 
-
-Rainbow is unique in that it is: 
-* vegetarian 
+* $1,000,000 in sale per week
+* 25,000 square foot
 * maintains a selection of 30,000 items
+* 2000-3000 customer per day
+* no loyalty program 
 
-With an emphasis on:
-* fresh produce
-* bulk ingredients (from oats to beans and spices to teas)
-* extensive supplements and body care sections
 
 ## Discovering customer types from transactions without a loyalty program!
-Rainbow has no loyalty program as of Spring 2019.
 
-Everyday the register spits out a giant text file (2000 printable pages) of that day's 2000-3000 transactions.
+
+Everyday the register spits out a giant raw text file (2000 printable pages) of the previous day's 2000-3000 transactions.
 <p align="middle">
 <img src = "./img/rgci/TLOG1.png" width="250" />
 <img src = "./img/rgci/TLOG2.png" width="250" />
 <img src = "./img/rgci/TLOG3.png" width="250" />
 </p>
 
-Can we use data science to make sense of this stream of text and find the types of shoppers?
+Is there a way to find some patterns of shopping in this run-on stream of text?
 
 ## Hello Non-Negative Matrix Factorization!
 
