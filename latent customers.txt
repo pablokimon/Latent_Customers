@@ -1,0 +1,25 @@
+Rainbow Grocery doesn’t have a method to analyse their customers baskets. 
+Who is the typical shopper?
+How many different types of shoppers are there? 
+What are people buying togther?
+
+10 Years of transaction data.
+It looks like an 80’s report to be printed and nothing more. it contains date, time, register, 13 character description of the item as a unique identifier, the price paid as well as the department number of the item.
+
+Since the unique identifier is a word or phrase i chose to use the unsupervised learning method of Non_Negative Matrix Factorization (NMF). I chose to treat each 13 character description as a word and use the power of NMF topic modeling to discover the latent types of baskets, a sort of potential, reverse shopping lists. Based on what was bought together, discovering the patterns in those groupings. The giant matrix of realtionships NMF takes as input was composed of 800,000 rows of transactions and 25,000 columns of unique items.
+
+I used Python regular expression to parse these txt files into json files. Imported the json into a pandas dataframe and from there made a count vectorizer of the items in the baskets. I passed this sparse matrix into the NMF model and evaluated the results as lists of words and word clouds. 
+
+The results were suprising. Not types of customers as was expected (healthy eater, gym fanatic, family of four, etc) but what was revealed was dimensions of shopping lists. When split into only two dimensions i found people who cook and people who don’t cook. two lists of items, one starting with 'ONIONS YELLOW', 'GARLIC WHITE', 'CARROTS LOOSE', 'CELERY', The other with 'APPLES FUJI', 'ORANGES NAVEL', 'SATSUMA MANDARIN', 'PEAR BOSC’.
+When expanding the results to 7 dimensions, we find THE SOUP DIMENSIONS, THE SALSA DIMENSION, THE SALAD DIMENSION, in addition to the FRUIT DIMENSION the POTATO DIMENSION and BELL PEPPER DIMENSION. What does this mean? Many people buy onions. most also buy garlic, a few less also by carrots and so one. They are potential shopping lists.
+
+Produce dominiated the lists becuase when you buy a banana, there is only one “word” for banana which shows up in this model: “BANANAS”. But when someone buys bread, there are 50 different breads they could buy. This data does not have any category information linking the different breads. The only thing that links items is the fact that they have been bought together over and over.  
+Produce links many baskets because 'BANANAS', are in 112832 of the 831284 baskets roughly 1 in 8 baskets, or 13.5% of transactions.
+The most popular bakery item is not even bread. 'BAGEL' links 31387 baskets, on 3.7% of transactions.
+So what happens when we strip away the produce dimension? Not baskets without produce, but basket similarity not based on produce. THE BAGEL AND CREAM CHEESE DIMENSION, THE READY TO EAT MEAL DIMENSION, THE BULK OATMEAL, RAISINS AND SEEDS, BULK SPICES, MILK EGGS BUTTER AND YOGURT.
+These dimensions make sense intutively, any cashier could verify seeing baskets like these. What this does show what is bought together and what is not together. There are many strategies that oculd be implemented from this information: merchandising items together or further apart.
+
+To evaluate the model, i compared the product of the decomposed matrices to the original matrix and averaged the difference. As i added more topics to the model, the error rate declined steadily. Over 10 topics, they started to bleed into each other and lose cohesion of lower number of topics. 
+
+I also found other surprising 
+
