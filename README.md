@@ -11,10 +11,10 @@ They have been a fixture of San Francisco since 1975 and have a register system 
 * no loyalty program 
 
 <p align="middle">
-<img src = "./img/store/spices.jpg" width="250" />
-<img src = "./img/store/bulk.jpg" width="250" />
-<img src = "./img/store/vits.jpg" width="250" />
-<img src = "./img/store/produce1.jpg" width="250" />
+<img src = "./img/store/spices.jpg" width="200" />
+<img src = "./img/store/bulk.jpg" width="200" />
+<img src = "./img/store/produce1.jpg" width="200" />
+<img src = "./img/store/vits.jpg" width="200" />
 </p>
 
 ## Discovering customer types from transactions without a loyalty program!
