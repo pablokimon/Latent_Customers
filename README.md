@@ -10,15 +10,21 @@ They have been a fixture of San Francisco since 1975 and have a register system 
 * 2000-3000 customer per day
 * no loyalty program 
 
+<p align="middle">
+<img src = "./img/store/spices.png" width="250" />
+<img src = "./img/store/bulk.png" width="250" />
+<img src = "./img/store/vits.png" width="250" />
+<img src = "./img/store/produce1.png" width="250" />
+</p>
 
 ## Discovering customer types from transactions without a loyalty program!
 
 
 Everyday the register spits out a giant raw text file (2000 printable pages) of the previous day's 2000-3000 transactions.
 <p align="middle">
-<img src = "./img/rgci/TLOG1.png" width="250" />
-<img src = "./img/rgci/TLOG2.png" width="250" />
-<img src = "./img/rgci/TLOG3.png" width="250" />
+<img src = "./img/store/TLOG1.png" width="250" />
+<img src = "./img/store/TLOG2.png" width="250" />
+<img src = "./img/store/TLOG3.png" width="250" />
 </p>
 
 Is there a way to find some patterns of shopping in this run-on stream of text?
