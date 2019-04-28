@@ -25,8 +25,8 @@ Is there a way to find some patterns of shopping in this run-on stream of text?
 
 ## Hello Non-Negative Matrix Factorization!
 
-NMF is an unsupervised learning model that can be used to find topic similiarity between documents based on the words they contain. Treating each transaction as a document and each item's unique 13 character description as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
-
+[NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) is an unsupervised learning model that can be used to find topic similiarity between documents based on the words they contain. Treating each transaction as a document and each item's **unique 13 character description** as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
+ 
 ## Step 1. Parse the Data
 
 Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formated text file.  I also had to account for stray punctuation characters in the item descriptions.
