@@ -73,7 +73,7 @@ When I set the model to only sort into two topics, I found:
 <img src="./img/2018/1554758000.topic1.png" width="300"/></p>
 
 |  People Who Cook        69% of Baskets              | People Who Don't Cook        31% of Baskets               |
-|------------------------------------------------------------|------------------------------------------------------------|
+|-----------------------|-----------------------------------------|
 | ONIONS YELLOW      | APPLES FUJI        |
 | GARLIC WHITE       | 1lb STRAWBERRY     |
 | PEPPERS RED BELL   | ORANGES NAVEL      |
