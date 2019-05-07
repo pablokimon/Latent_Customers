@@ -1,5 +1,6 @@
 *.pyc
 .idea
+.ipynb
 .ipynb_checkpoints
 *.bak
 *.swp

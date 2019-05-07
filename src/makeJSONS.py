@@ -2,8 +2,14 @@ import re
 import json
 import os
 
+'''This is the regex which consumes toshiba/IBM ACE transactionlogs.txt and converts them into wonderful jsons.
+It will break, its amazing it worked this well. Test it on lots of samples of tlogs.
+Use an online regex builder if you get stuck.
+
+'''
+
 def pos_float(s):
-    #print (s)
+    #this function sets values followed by a + or - to the correct sign
     if s[-1]=="-":
         return -float(s[:-1])
     elif s[-1]=='+':
@@ -12,19 +18,26 @@ def pos_float(s):
         return float(s)
 
 def parse_entry(entry):
+    #this functions parses each transaction
+
+    #setting the header format regex
     header_re = r"\s+DATE\s+TIME\s+TERM\s+TRANS\s+OPER\s+GROSS\+\s+GROSS-\s+NET\s+TRAN TYPE\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+"
     match = re.search(header_re, entry)
     if match is None:
         return None
     transinfo = match.groups()
+    #skip transactions not of the type 'Checkout'
     if transinfo[8]!='Checkout':
         return None
+    #matches lines containing item description (including many symbols), price and department number.
     item_re = r"^ (\w+)?\s+([\w \-,\+.'\"\\\/%&]+?)\s+(\d+\.\d+-?)\s+\w?\s+Dept\s+(\d+)"
     items = re.findall( item_re, entry, flags=re.MULTILINE )
     
+    #matches lines with 'Account' numbers for credit cards and other misc charge accounts
     account_re = r"\s[Account]+\s+\d+$"
     account = re.findall(account_re,entry,flags=re.MULTILINE )
     
+    #define the names of the items to match and return
     ret = {'date':transinfo[0],
            'time':transinfo[1],
            'term':int(transinfo[2]),
@@ -35,7 +48,7 @@ def parse_entry(entry):
            'net':pos_float(transinfo[7]),
            'type':transinfo[8],
           'account':account}
-    #[[d[-4:] for d in account]]
+    
     items = [(x[0].strip(), x[1].strip(), pos_float(x[2]), int(x[3])) for x in items]
     
     ret['items'] = items
@@ -43,8 +56,8 @@ def parse_entry(entry):
     return ret
 
 def parse_transaction_file(fn):
+    #comsumes the raw text file transactionlogs.txt
     raw = open(fn, encoding="latin1").read()
-    
     
     # remove page headers
     headerre = re.compile( r" +Auto Report: (\b.*)\s+Entry: (\b.*)\s+TRANSACTION SUMMARY LOG REPORT  - STORE\s+(.+)\s+PREVIOUS PERIOD - (\S+)\s+Reported at:\s+(\S+ \S+)\s+",
@@ -74,7 +87,7 @@ def pos_to_json(fn_in, fn_out):
     fpout.close()
 
 
-
+#itereate through all subfolders seeking tlogs to process!
 for subdir, dirs, files in os.walk('./tlogs'):
     for file in files:
         #print os.path.join(subdir, file)
@@ -100,16 +113,14 @@ else:
 
 
 for i,f in enumerate(os.walk(tlog_path)):
-    #print (i,f)
+    #iterete through all folders
     for ff in f:
-        
-        #print("ff:",ff)
         if type(ff)!='list':
+            #when it find a tlog path:
             if str(ff).startswith(tlog_path):
                 path = ff
         for fff in ff:
-            #print("fff:",fff)
+            #when it finds a transaction log:
             if fff=="transactionlog.txt":
-                #print(path+'/'+fff)
-                #print (json_path+'/'+'%d.json'%i)
+                #process it with the above functions:
                 pos_to_json(path+'/'+fff,json_path+'/'+'%d.json'%i)
