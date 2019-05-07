@@ -168,7 +168,7 @@ Ignoring any items from the produce department, we get these results:
 | 4125 OG STL CUT OA | TILLY SHARP CHEDDA | PEASANT PIE GARBAN | DAVE'S KILLER      | 3290 THOMPSON RAIS | 5101 ROAST CASHEWS | ACME BAGUETTE      |
 
 ## Without produce, 10 topics looks a little better than 7:
-<img src="./img/2018/1555024265.all9topics.png">
+<img src="./img/2018/1555024265.all9topicscropped.png">
 
 | 0.05               | 0.03               | 0.03               | 0.24               | 0.02               | 0.02               | 0.02               | 0.57               | 0.01               | 0.02               |
 |:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
