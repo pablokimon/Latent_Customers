@@ -170,7 +170,7 @@ Ignoring any items from the produce department, we get these results:
 ## Without produce, 10 topics looks a little better than 7:
 <img src="./img/2018/1555024265.all9topicscropped.png">
 
-| Bulk nuts and seeds 5%              | Bagel and Cream Cheese 3%               | Ready to eat meals 3%               | Oats seeds and spice 24%               | Dried Fruit 2%               | More Dried Fruit 2%              | 0.02               | 0.57               | 0.01               | 0.02               |
+| Bulk nuts and seeds 5%              | Bagel and Cream Cheese 3%               | Ready to eat meals 3%               | Oats seeds and spice 24%               | Nuts and seeds 2%               | Dried Fruit 2%              | Olive Bar 2%               | Milk, eggs, butter and cheese 57%               | Oats, beans and raisins 1%               | Morning pastry 2%               |
 |:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
 | 5290 WALNUTS       | BAGEL              | REFRIGERATED       | 4110 ROLLED OATS   | 5120 ORG ALMONDS   | 3185 ORG MANGO     | 2448 CASTEL OLIVE  | PARMIGIANO REGG    | 4110org rolledOATS | BAKERY             |
 | 5250 ORG PECAN HA  | OV CRM CHEESE SPRE | INDIAN BENTO       | 6645 SUNFLWR SEEDS | 5180 WHOLE CASHEWS | 3080 MEDJOOL DATES | 2553BLACK OIL CURE | WHOLE ORG MILK     | 3295  FLAME RAISIN | SEMIFREDDIS        |
