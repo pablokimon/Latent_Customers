@@ -105,15 +105,15 @@ People tend to do shopping trips for produce to cook apart from trips of fruit, 
 
 ## Spliting into 7 groups we find:
 
-<img src="./img/2018/1554759052.topic0.png">
-<img src="./img/2018/1554759053.topic1.png">
-<img src="./img/2018/1554759053.topic2.png">
-<img src="./img/2018/1554759054.topic3.png">
-<img src="./img/2018/1554759054.topic4.png">
-<img src="./img/2018/1554759055.topic5.png">
-<img src="./img/2018/1554759056.topic6.png">
+<img src="./img/2018/1554759052.topic0.png"width="200">
+<img src="./img/2018/1554759053.topic1.png"width="200">
+<img src="./img/2018/1554759053.topic2.png"width="200">
+<img src="./img/2018/1554759054.topic3.png"width="200">
+<img src="./img/2018/1554759054.topic4.png"width="200">
+<img src="./img/2018/1554759055.topic5.png"width="200">
+<img src="./img/2018/1554759056.topic6.png"width="200">
 | "Stir Fry Basket" 59%               | Fruit 8%               | "The Soup Basket" 4%               | "Stir Fry 2 Basket" 6%               |  "The Kale Basket" 7%               | "The Salad Basket" 5%               | "The Salsa Basket" 11%               |
-|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
+|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 | PEPPERS RED BELL   | APPLES FUJI        | ONIONS YELLOW      | GARLIC WHITE       | LEMONS             | CELERY             | CILANTRO           |
 | SQUASH ZUCCHINI    | ORANGES NAVEL      | POTATOES YELLOW    | GINGER             | LIMES              | CARROTS LOOSE      | PEPPER CHILI       |
 | BROCCOLI LOOSE     | SATSUMA MANDARIN   | POTATOES RUSSET    | ONIONS RED         | KALE DINO          | CUCUMBERS          | LIMES              |
