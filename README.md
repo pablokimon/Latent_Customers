@@ -73,7 +73,7 @@ When I set the model to only sort into two topics, I found:
 <img src="./img/2018/1554758000.topic1.png" width="300"/></p>
 
 |  People Who Cook        69% of Baskets              | People Who Don't Cook        31% of Baskets               |
-|-----------------------|-----------------------------------------|
+|--------------------|--------------------|
 | ONIONS YELLOW      | APPLES FUJI        |
 | GARLIC WHITE       | 1lb STRAWBERRY     |
 | PEPPERS RED BELL   | ORANGES NAVEL      |
@@ -97,30 +97,36 @@ When I set the model to only sort into two topics, I found:
 | SPINACH LOOSE      | GRAPES RED         |
 | POTATOES GARNET    | CARROTS LOOSE      |
 | POTATOES YELLOW    | CUKE MEDIT/PERSIAN |
-| LETTUCE SALAD MIX  | GRAPEFRUIT         |
-| ARUGULA LOOSE      | PEAR BOSC          |
-| CUKE MEDIT/PERSIAN | POTATOES GARNET    |
-| TOMATO DRY FARM    | PLUOT/PLUM RED     |
-| HERBS BUNCH        | BLUEBERRY          |
-| SHALLOTS           | 3185 ORG MANGO     |
-| 1lb STRAWBERRY     | BROCCOLI  BUNCHED  |
-| TOMATOES ROMA      | KIWI LOOSE         |
-| 5290 WALNUTS       | 5120 ORG ALMONDS   |
-| TOMATO MIX HEIRLOO | SQUASH ZUCCHINI    |
-| LEEKS              | PERSIMMONS FUYU    |
-| MUSHROOMS SHIITAKE | POTATOES JAPANESE  |
-| CAULIFLOWER BULK   | PEPPERS RED BELL   |
-| PEPPERS GREEN BELL | PEARS RED          |
-| ORANGES NAVEL      | TOMATO MIX HEIRLOO |
-| CABBAGE RED        | CORN               |
-| POTATOES RUSSET    | MANGO              |
-| CORN               | CELERY             |
-| EGGPLANT GLOBE     | BEETS RED LOOSE    |
-| BROCCOLI  BUNCHED  | CAULIFLOWER BULK   |
-| APPLES GALA        | 2448 CASTEL OLIVE  |
-| PEACH              | BROCCOLI BABY SWEE |
-| BROCCOLI BABY SWEE | LETTUCE RED BUTTER |
-| BEETS RED LOOSE    | SUGAR PLUM CLAM    |
-| NECTARINE          | LETTUCE RED LEAF   |
-| POTATOES JAPANESE  | CARROTS BABY       |
-| KALE GREEN         | APPLES, GRANNY SMI |
+Etc...
+
+## What does this tell us?
+
+People tend to do shopping trips for produce to cook apart from trips of fruit, salad and bagels which don't need to be cooked.
+
+## Spliting into 7 groups we find:
+
+<img src="./img/2018/1554759052.topic0.png">
+<img src="./img/2018/1554759053.topic1.png">
+<img src="./img/2018/1554759053.topic2.png">
+<img src="./img/2018/1554759054.topic3.png">
+<img src="./img/2018/1554759054.topic4.png">
+<img src="./img/2018/1554759055.topic5.png">
+<img src="./img/2018/1554759056.topic6.png">
+| "Stir Fry Basket" 59%               | Fruit 8%               | "The Soup Basket" 4%               | "Stir Fry 2 Basket" 6%               |  "The Kale Basket" 7%               | "The Salad Basket" 5%               | "The Salsa Basket" 11%               |
+|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
+| PEPPERS RED BELL   | APPLES FUJI        | ONIONS YELLOW      | GARLIC WHITE       | LEMONS             | CELERY             | CILANTRO           |
+| SQUASH ZUCCHINI    | ORANGES NAVEL      | POTATOES YELLOW    | GINGER             | LIMES              | CARROTS LOOSE      | PEPPER CHILI       |
+| BROCCOLI LOOSE     | SATSUMA MANDARIN   | POTATOES RUSSET    | ONIONS RED         | KALE DINO          | CUCUMBERS          | LIMES              |
+| BEANS GREEN        | PEAR BARTLETT      | POTATOES GARNET    | SHALLOTS           | PARSLEY ITALIAN    | KALE DINO          | ONIONS RED         |
+| 1lb STRAWBERRY     | CARROTS BUNCH      | CARROTS BUNCH      | MUSHROOM CRIMINI   | HERBS BUNCH        | PARSLEY ITALIAN    | ONIONS GREEN       |
+| CARROTS BUNCH      | PEAR BOSC          | MUSHROOM CRIMINI   | MUSHROOMS SHIITAKE | ORANGES VALENCIA   | BEETS RED LOOSE    | PARSLEY ITALIAN    |
+| SPINACH LOOSE      | ORANGES VALENCIA   | LEEKS              | ROOT TURMERIC      | GRAPEFRUIT         | LEEKS              | HERBS BUNCH        |
+| KALE DINO          | BAGEL              | PEPPERS GREEN BELL | ONIONS WHITE       | GINGER             | GINGER             | GINGER             |
+| CUCUMBERS          | PERSIMMONS FUYU    | PARSLEY ITALIAN    | 5290 WALNUTS       | SHALLOTS           | BROCCOLI LOOSE     | TOMATOES ROMA      |
+| MUSHROOM CRIMINI   | GRAPEFRUIT         | TOMATOES ROMA      | PARMIGIANO REGG    | ARUGULA LOOSE      | POTATOES YELLOW    | SHALLOTS           |
+| LETTUCE SALAD MIX  | REFRIGERATED       | POTATOES JAPANESE  | KALE DINO          | CUCUMBERS          | ORANGES NAVEL      | RADISHES RED/FRENC |
+| TOMATO DRY FARM    | 5290 WALNUTS       | SQUASH BUTTERNUT   | POTATOES GARNET    | APPLES, GRANNY SMI | APPLES, GRANNY SMI | CUKE MEDIT/PERSIAN |
+| ARUGULA LOOSE      | 3185 ORG MANGO     | CABBAGE GREEN      | LEMONS MEYER       | 5290 WALNUTS       | CABBAGE RED        | CABBAGE RED        |
+| PEACH              | BLUEBERRY          | SHALLOTS           | POTATOES YELLOW    | TOMATO MIX HEIRLOO | KALE GREEN         | DILL               |
+| NECTARINE          | KIWI LOOSE         | POTATOES RED       | 5120 ORG ALMONDS   | ORANGES NAVEL      | POTATOES GARNET    | ONIONS WHITE       |
+| CUKE MEDIT/PERSIAN | PEARS RED          | ORANGES NAVEL      | POTATOES JAPANESE  | NECTARINE          | CABBAGE GREEN      | CABBAGE GREEN      |
