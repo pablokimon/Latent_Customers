@@ -104,18 +104,20 @@ Etc...
 People tend to do shopping trips for produce to cook apart from trips of fruit, salad and bagels which don't need to be cooked.
 
 ## Spliting into 7 groups we find:
+
+Seven groups gives us some pretty clear types of shopping trips:
 <p>
-<img src="./img/2018/1554759052.topic0.png"width="200"/>
-<img src="./img/2018/1554759053.topic1.png"width="200"/>
-<img src="./img/2018/1554759053.topic2.png"width="200"/>
-<img src="./img/2018/1554759054.topic3.png"width="200"/>
-<img src="./img/2018/1554759054.topic4.png"width="200"/>
-<img src="./img/2018/1554759055.topic5.png"width="200"/>
-<img src="./img/2018/1554759056.topic6.png"width="200"/>
+<img src="./img/2018/1554759052.topic0.png"width="150"/>
+<img src="./img/2018/1554759053.topic1.png"width="150"/>
+<img src="./img/2018/1554759053.topic2.png"width="150"/>
+<img src="./img/2018/1554759054.topic3.png"width="150"/>
+<img src="./img/2018/1554759054.topic4.png"width="150"/>
+<img src="./img/2018/1554759055.topic5.png"width="150"/>
+<img src="./img/2018/1554759056.topic6.png"width="150"/>
  </p>
  
-| Stir Fry Basket 59% | The Fruit Basket 8% | The Soup Basket 4% | Stir Fry 2 Basket 6% |  The Kale Basket 7% | The Salad Basket 5%  | The Salsa Basket 11%  |
-|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
+| Stir-Fry Basket 59% | The Fruit Basket 8% | The Soup Basket 4% | Stir-Fry 2 Basket 6% |  The Kale Basket 7% | The Salad Basket 5%  | The Salsa Basket 11%  |
+|--|-------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
 | PEPPERS RED BELL   | APPLES FUJI        | ONIONS YELLOW      | GARLIC WHITE       | LEMONS             | CELERY             | CILANTRO           |
 | SQUASH ZUCCHINI    | ORANGES NAVEL      | POTATOES YELLOW    | GINGER             | LIMES              | CARROTS LOOSE      | PEPPER CHILI       |
 | BROCCOLI LOOSE     | SATSUMA MANDARIN   | POTATOES RUSSET    | ONIONS RED         | KALE DINO          | CUCUMBERS          | LIMES              |
@@ -132,3 +134,56 @@ People tend to do shopping trips for produce to cook apart from trips of fruit, 
 | PEACH              | BLUEBERRY          | SHALLOTS           | POTATOES YELLOW    | TOMATO MIX HEIRLOO | KALE GREEN         | DILL               |
 | NECTARINE          | KIWI LOOSE         | POTATOES RED       | 5120 ORG ALMONDS   | ORANGES NAVEL      | POTATOES GARNET    | ONIONS WHITE       |
 | CUKE MEDIT/PERSIAN | PEARS RED          | ORANGES NAVEL      | POTATOES JAPANESE  | NECTARINE          | CABBAGE GREEN      | CABBAGE GREEN      |
+
+## But why is produce dominating the topics? What happened to all the other 30,000 items?
+
+When someone buys a yellow onion there is one one word for yellow onion: "ONIONS YELLOW ".
+When they buy a loaf of bread, there are 50 different "words" for each loaf of bread.
+Produce is popular and common, but because there are only about 200 produce items they will always dominate the topics.
+
+## What happens when we remove the Produce items all together?
+
+Something pretty amazing actually.
+Ignoring any items from the produce department, we get these results:
+
+<img src="./img/7withoutproduce.png">
+
+
+| Bulk Nuts and Seeds 5% | Bagel and Cream Cheese 3%               | Ready to Eat Meals 3%               | Cheese, Milk, Eggs, Oats 83%               | Bulk Nuts and Seeds 2%               | 0Bulk Dried Fruits 2%               | Bulk Olive Bar 2%               |
+|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
+| 5290 WALNUTS       | BAGEL              | REFRIGERATED       | PARMIGIANO REGG    | 5120 ORG ALMONDS   | 3185 ORG MANGO     | 2448 CASTEL OLIVE  |
+| 5250 ORG PECAN HA  | OV CRM CHEESE SPRE | BAKERY             | 4110org rolledOATS | 5180 WHOLE CASHEWS | 3080 MEDJOOL DATES | 2553BLACK OIL CURE |
+| 6645 SUNFLWR SEEDS | GINA MARIE CC      | INDIAN BENTO       | WHOLE ORG MILK     | 5250 ORG PECAN HA  | 3245 DRD PINEAPPLE | 2430 KALAMATA OLIV |
+| 5132 R/NS ALMONDS  | OV CREAM CHEESE    | SPINACH PEASANT PI | 4110 ROLLED OATS   | 6645 SUNFLWR SEEDS | 3125 TURK APRICOT  | 2450 KALAMATA-PIT  |
+| 5150or BRAZIL NUTS | NANCY'S ORGANIC CR | GLORIA'S WRAPS     | STRAUS PLN YOG QT  | 5161 CASHEW PIECES | 3174 ORG DR GINGE  | 2572 DOLMAS        |
+| 3295  FLAME RAISIN | MORNING PASTRY/MUF | EPICUREAN          | 3680 BAKERS CH FLO | 6560  PUMPKIN SEED | 2887 ENERGY CHUNKS | BULK               |
+| 6560  PUMPKIN SEED | SIERRA ORG CC TUB  | URBAN REMEDY       | 8161 ORG CUMIN PWD | 3080 MEDJOOL DATES | 2883 ENERGY CHUNKS | 2552 OLIVES wCUMI  |
+| 5101 ROAST CASHEWS | BAKERY             | GLORIA'S BURRITO   | 6645 SUNFLWR SEEDS | 5277  RAW PISTACH  | 3285JACK FRUIT     | 6985 OLIVEANTIPAST |
+| 5180 WHOLE CASHEWS | SCONES/MUFFINS     | PANGMU             | EGGS DZ ROCK LG    | 3295  FLAME RAISIN | 3740 BANANA CHIPS  | MARCONA ALMONDS    |
+| 5161 CASHEW PIECES | SEMIFREDDIS BAGUET | LA CASCADA         | 3295  FLAME RAISIN | 5200 RAW HAZELNUTS | 5132 R/NS ALMONDS  | 2457 PICHOLINE OLV |
+| 3290 THOMPSON RAIS | TOFUTTI PLAIN ''CH | PERFECT PAPAS      | 8571 TURM PWD ORG  | 5150or BRAZIL NUTS | 3175 SMYRNA FIGS   | 2332 HALF SOPICKLE |
+| 5277  RAW PISTACH  | MONTEREY JACK CHEE | LENTIL SALAD       | 2580 NUTRI YEAST   | 3065 COCONUT FLAKE | 3110 DRD APPLE     | COWGIRL MT TAM     |
+| 5150 BRAZIL NUTS   | ESTHERS PRETZELS   | ORGANIC CARROT 16  | PASTURE RAISED EGG | 5150 BRAZIL NUTS   | CALIFIA UNSWT      | 2530 NICOISES OLIV |
+| 3144 OG DR CRANBER | SEMIFREDDIS LOAF   | SUPERFRESH SANDWIC | 5250 ORG PECAN HA  | 4111 CHIA SEEDS    | 3290 THOMPSON RAIS | 2455 OLIVE MEDLEY  |
+| 4125 OG STL CUT OA | TILLY SHARP CHEDDA | PEASANT PIE GARBAN | DAVE'S KILLER      | 3290 THOMPSON RAIS | 5101 ROAST CASHEWS | ACME BAGUETTE      |
+
+## Without produce, 10 topics looks a little better than 7:
+<img src="./img/2018/1555024265.all9topics.png">
+
+| 0.05               | 0.03               | 0.03               | 0.24               | 0.02               | 0.02               | 0.02               | 0.57               | 0.01               | 0.02               |
+|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|:-------------------|
+| 5290 WALNUTS       | BAGEL              | REFRIGERATED       | 4110 ROLLED OATS   | 5120 ORG ALMONDS   | 3185 ORG MANGO     | 2448 CASTEL OLIVE  | PARMIGIANO REGG    | 4110org rolledOATS | BAKERY             |
+| 5250 ORG PECAN HA  | OV CRM CHEESE SPRE | INDIAN BENTO       | 6645 SUNFLWR SEEDS | 5180 WHOLE CASHEWS | 3080 MEDJOOL DATES | 2553BLACK OIL CURE | WHOLE ORG MILK     | 3295  FLAME RAISIN | SEMIFREDDIS        |
+| 5132 R/NS ALMONDS  | GINA MARIE CC      | SPINACH PEASANT PI | 8161 ORG CUMIN PWD | 5250 ORG PECAN HA  | 3125 TURK APRICOT  | 2430 KALAMATA OLIV | STRAUS PLN YOG QT  | 2180 ORG BLK BEANS | MORNING PASTRY/MUF |
+| 5150or BRAZIL NUTS | OV CREAM CHEESE    | GLORIA'S WRAPS     | 8571 TURM PWD ORG  | 5161 CASHEW PIECES | 3245 DRD PINEAPPLE | 2450 KALAMATA-PIT  | EGGS DZ ROCK LG    | 2195 ORG GARBANZO  | SCONES/MUFFINS     |
+| 5101 ROAST CASHEWS | NANCY'S ORGANIC CR | EPICUREAN          | 3295  FLAME RAISIN | 3080 MEDJOOL DATES | 3174 ORG DR GINGE  | 2572 DOLMAS        | DAVE'S KILLER      | 3065 COCONUT FLAKE | BULK               |
+| 6645 SUNFLWR SEEDS | SIERRA ORG CC TUB  | URBAN REMEDY       | 2580 NUTRI YEAST   | 5277  RAW PISTACH  | 2887 ENERGY CHUNKS | BULK               | PASTURE RAISED EGG | 3290 THOMPSON RAIS | PEPPLES DONUTS     |
+| 5277  RAW PISTACH  | MORNING PASTRY/MUF | GLORIA'S BURRITO   | 4125 OG STL CUT OA | 6560  PUMPKIN SEED | 2883 ENERGY CHUNKS | 2552 OLIVES wCUMI  | ORG 1LB BUTTER     | 2220 ORG RED LNTL  | 6075 FRESH RAVIOLI |
+| 5180 WHOLE CASHEWS | SCONES/MUFFINS     | PANGMU             | 6560  PUMPKIN SEED | 5200 RAW HAZELNUTS | 3285JACK FRUIT     | 6985 OLIVEANTIPAST | ORG 1/2 & 1/2 PT   | 4111 CHIA SEEDS    | ESTHERS PRETZELS   |
+| 3290 THOMPSON RAIS | TOFUTTI PLAIN ''CH | LA CASCADA         | 8036 BAY LEAF ORG  | 5150or BRAZIL NUTS | 5132 R/NS ALMONDS  | 2332 HALF SOPICKLE | ORG WM QT CLOVER   | ORG MAPLE SYRUP 68 | Black China Browni |
+| 5150 BRAZIL NUTS   | SEMIFREDDIS BAGUET | PERFECT PAPAS      | 6830 WILDFLWER HON | 6645 SUNFLWR SEEDS | 3740 BANANA CHIPS  | 2457 PICHOLINE OLV | EGGS JUDY LG DZ    | 2225  ORG FR LNTL  | ACME BAGUETTE      |
+| 3295  FLAME RAISIN | ESTHERS PRETZELS   | LENTIL SALAD       | 3680 BAKERS CH FLO | 5150 BRAZIL NUTS   | 3175 SMYRNA FIGS   | MARCONA ALMONDS    | STRAUS MILK 64oz   | 3140 SHRED COCONUT | ESTHER'S PASTRY    |
+| 6560  PUMPKIN SEED | MONTEREY JACK CHEE | ORGANIC CARROT 16  | 4100  ROLLED OATS  | 5185 ORG R/S CASHE | 3290 THOMPSON RAIS | 2530 NICOISES OLIV | ORG Whipping crm   | 6645 SUNFLWR SEEDS | SEMIFREDDIS BAGUET |
+| 3144 OG DR CRANBER | SEMIFREDDIS LOAF   | SUPERFRESH SANDWIC | 4111 CHIA SEEDS    | 3290 THOMPSON RAIS | 3110 DRD APPLE     | 2455 OLIVE MEDLEY  | CALIFIA UNSWT      | 3144 OG DR CRANBER | STARTER Pastry     |
+| 5161 CASHEW PIECES | SEMIFREDDIS        | PEASANT PIE GARBAN | 5250 ORG PECAN HA  | 5275 RST PISTACHI  | 5101 ROAST CASHEWS | 2345 SAUERKRAUT AV | CLO UNSALTED BUTTE | 3680 BAKERS CH FLO | BATH & BODY        |
+| 3486 SLICED ALMOND | KITE HILL CHIVE    | peasant pie-lentil | 4105 QUICK OATS    | 3125 TURK APRICOT  | 3144 OG DR CRANBER | COWGIRL MT TAM     | ORGANIC 2% MILK    | 5150or BRAZIL NUTS | SEMIFREDDIS LOAF   |
