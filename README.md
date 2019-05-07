@@ -71,7 +71,7 @@ When I set the model to only sort into two topics, I found:
 <img src="./img/2018/1554758000.topic1.png"/></p>
 
 | 0.69               | 0.31               |
-|--------------------|--------------------|
+|------------------------------------------------------------|------------------------------------------------------------|
 | ONIONS YELLOW      | APPLES FUJI        |
 | GARLIC WHITE       | 1lb STRAWBERRY     |
 | PEPPERS RED BELL   | ORANGES NAVEL      |
