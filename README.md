@@ -69,8 +69,9 @@ Well it turned out I was not finding the customer types as I set out to, but I d
 When I set the model to only sort into two topics, I found:
 <p><img src="./img/2018/1554758000.topic0.png"/>
 <img src="./img/2018/1554758000.topic1.png"/></p>
+
 | 0.69               | 0.31               |
-|:-------------------|:-------------------|
+|--------------------|--------------------|
 | ONIONS YELLOW      | APPLES FUJI        |
 | GARLIC WHITE       | 1lb STRAWBERRY     |
 | PEPPERS RED BELL   | ORANGES NAVEL      |
