@@ -105,7 +105,7 @@ People tend to do shopping trips for produce to cook apart from trips of fruit, 
 
 ## Spliting into 7 groups we find:
 <p>
-<img src="./img/2018/1554759052.topic0.png"width="200"/>
+<img src="./img/2018/1554759052.topic0.png"width="180"/>
 <img src="./img/2018/1554759053.topic1.png"width="200"/>
 <img src="./img/2018/1554759053.topic2.png"width="200"/>
 <img src="./img/2018/1554759054.topic3.png"width="200"/>
