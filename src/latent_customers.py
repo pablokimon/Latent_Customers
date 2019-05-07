@@ -166,7 +166,7 @@ def fit_NMF(sparse_matrix_,n_components_,max_iter=250):
     #calculate the strength of each topic my making it a hard classifier and scoring each topic accordingly
     #make w a matrix of zeros shaped like W
     w = np.zeros_like(W)
-    #
+    #if its the strongest, give it a 1!
     w[np.arange(len(W)), W.argmax(1)] = 1
     topic_strength = np.sum(w,axis=0)
     topic_strength = np.round(topic_strength/topic_strength.sum(),2)
