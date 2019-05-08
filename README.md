@@ -4,18 +4,18 @@
 [The Problem](#theproblem)  
 [The Solution](#thesolution)   
 [Step 1. Parse the Data](#step1)    
-[Step 2. Prepare the Item List and Dictionary](#step2)    
-[Step 3. Building a Sparse Matrix](#step3)
-[Step 4. Pass the Matrix to the NMF Model](step4)
-[Step 5. Interpreting the model](#step5)
-[Step 6. What is the best number of topics?](#step6)
-[Step 7. Interpreting the results](#step7)
-[Results](#results)
-[2 Topics](#2topics)
-[7 Topics](#7topics)
-[7 Topics no produce](#7topicsnoproduce)
-[10 Topics no produce](#10topicsnoproduce)
-[Takeaways](#takeaways)
+[Step 2. Prepare the Item List and Dictionary](#step2)        
+[Step 3. Building a Sparse Matrix](#step3)    
+[Step 4. Pass the Matrix to the NMF Model](step4)    
+[Step 5. Interpreting the model](#step5)    
+[Step 6. What is the best number of topics?](#step6)    
+[Step 7. Interpreting the results](#step7)    
+[Results](#results)    
+[2 Topics](#2topics)    
+[7 Topics](#7topics)    
+[7 Topics no produce](#7topicsnoproduce)    
+[10 Topics no produce](#10topicsnoproduce)    
+[Takeaways](#takeaways)    
 
 <a name="theproblem"/>
 # The Problem: How can a grocery store analyze their customer's shopping without a loyalty program?
@@ -125,6 +125,7 @@ Etc...
 
 People tend to do shopping trips for produce to cook apart from trips of fruit, salad and bagels which don't need to be cooked.
 <a name="7topics"/>
+
 ## Splitting into 7 groups we find:
 
 Seven groups gives us some pretty clear types of shopping trips:
