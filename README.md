@@ -3,8 +3,8 @@
 ##### Table of Contents  
 [The Problem](#theproblem)  
 [The Solution](#thesolution)   
-[Step 1. Parse the Data](#step1)
-[Step 2. Prepare the Item List and Dictionary](#step2)
+[Step 1. Parse the Data](#step1)    
+[Step 2. Prepare the Item List and Dictionary](#step2)    
 [Step 3. Building a Sparse Matrix](#step3)
 [Step 4. Pass the Matrix to the NMF Model](step4)
 [Step 5. Interpreting the model](#step5)
