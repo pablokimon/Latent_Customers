@@ -37,6 +37,7 @@ They have been a fixture of San Francisco since 1975 and have a register system 
 </p>
 
 <a name="thesolution"/>
+
 ## Discovering customer types from transactions without a loyalty program!
 
 
