@@ -2,11 +2,22 @@
 
 ##### Table of Contents  
 [The Problem](#theproblem)  
-[Emphasis](#emphasis)   
-
+[The Solution](#thesolution)   
+[Step 1. Parse the Data](#step1)
+[Step 2. Prepare the Item List and Dictionary](#step2)
+[Step 3. Building a Sparse Matrix](#step3)
+[Step 4. Pass the Matrix to the NMF Model](step4)
+[Step 5. Interpreting the model](#step5)
+[Step 6. What is the best number of topics?](#step6)
+[Step 7. Interpreting the results](#step7)
+[Results](#results)
+[2 Topics](#2topics)
+[7 Topics](#7topics)
+[7 Topics no produce](#7topicsnoproduce)
+[10 Topics no produce](#10topicsnoproduce)
+[Takeaways](#takeaways)
 
 <a name="theproblem"/>
-
 # The Problem: How can a grocery store analyze their customer's shopping without a loyalty program?
 
 A large Bay-Area Natural Food store doesn’t have a method to analyze their customer's baskets.
@@ -25,6 +36,7 @@ They have been a fixture of San Francisco since 1975 and have a register system 
 <img src = "./img/store/vits.jpg" width="200" />
 </p>
 
+<a name="thesolution"/>
 ## Discovering customer types from transactions without a loyalty program!
 
 
@@ -40,12 +52,12 @@ Is there a way to find some patterns of shopping in this run-on stream of text?
 ## Hello Non-Negative Matrix Factorization!
 
 [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) is an unsupervised learning model that can be used to find topic similarity between documents based on the words they contain. Treating each transaction as a document and each item's **unique 13 character description** as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
- 
+<a name="step1"/> 
 ## Step 1. Parse the Data
 
 Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formatted text file.  I also had to account for stray punctuation characters in the item descriptions.
 Writing the results into a json format allowed for them to be quickly read into a pandas dataframe. See the [makeJSONS.py](https://github.com/pablokimon/latent_customers/blob/master/src/makeJSONS.py) file.
-
+<a name="step2"/>
 ## Step 2. Prepare the Item List and Dictionary
 
 For the results below, I used all the transaction data from 2018, over 800,000 rows containing 30,000 unique items. All the following steps can be executed with the [latent_customers.py](https://github.com/pablokimon/latent_customers/blob/master/src/latent_customers.py) file.
@@ -53,27 +65,29 @@ The item data was extracted as a list of list which I iterated through, adding t
 
 NOTE: Bananas were in 112832 of the 831284 baskets, roughly 1 in 8 baskets, or 13.5% of transactions and Hass Avocados were in 10% of baskets.
 Removing both of these items allowed a greater differentiation between baskets. The next most prevalent item was "YELLOW ONIONS" which were in only ~7% of baskets and did not adversely affect results.
-
+<a name="step3"/>
 ## Step 3. Building a Sparse Matrix
 
 Because I needed the items descriptions to remain intact at the entire 13-character string, I built my own vectorizer. Each time an item was present in the basket, I added 1 for that item, for that transaction. If the value was negative (such as a voided item) I subtracted 1 for that item, for that transaction. This accounted for an item being rung up twice and voided once, for example. Iterating through the lists of transactions and adding a dictionary key for the row (transaction) and a tuple of the item and its count in the basket I built up a dictionary object, which was then passed to a sparse matrix.
-
+<a name="step4"/>
 ## Step 4. Pass the Matrix to the NMF Model
 
 Just before passing this sparse matrix to the NMF model, I set any negative values to 0. After choosing a value for the number of components (topics) and maximum iterations I let the NMF work its magic.  I returned from the model the number of iterations the model used to achieve the number of components specified, and the decomposed matrices W(rows of transactions, columns of topics) and H (rows of topics, columns of items).
-
-## Step 5. Interpreting the model.
+<a name="step5"/>
+## Step 5. Interpreting the model
 
 The values in W and H represent that item or transactions association or weight to that topic. The higher the number, the more weight that item or transaction contributes to that topic. Sorting these in descending order shows up the most related items and transactions for each topic.
-
+<a name="step6"/>
 ## Step 6. What is the best number of topics?
 
 To evaluate or score a topic modeler, we can compare the dot product of the resulting matrices W and H against the original matrix and evaluate the differences. With this specific type of data, increasing topics continued to slowly score better and better but the actual results of the increase topics were not an improvement, they got worse. By 10 topics, the top items were so blended between different topics that they were not easily differentiable. I settled on 7 topics for this data set and I encourage you to evaluate the number of components with math and your eye.
-
-## Step 7. Interpreting the results.
+<a name="step7"/>
+## Step 7. Interpreting the results
 
 Well it turned out I was not finding the customer types as I set out to, but I did discover these shopping dimensions, these grocery vectors that baskets can align along. When people go shopping, it is often with a specific, similar and repeated purpose. People shop for ingredients to make: soup, salsa and salad.
-
+<a name="results"/>
+# Results
+<a name="2topics"/>
 ## Two Topics: People Who Cook and People Who Don't.
 
 When I set the model to only sort into two topics, I found:
@@ -110,7 +124,7 @@ Etc...
 ## What does this tell us?
 
 People tend to do shopping trips for produce to cook apart from trips of fruit, salad and bagels which don't need to be cooked.
-
+<a name="7topics"/>
 ## Splitting into 7 groups we find:
 
 Seven groups gives us some pretty clear types of shopping trips:
@@ -148,7 +162,7 @@ Seven groups gives us some pretty clear types of shopping trips:
 When someone buys a yellow onion there is one word for yellow onion: "ONIONS YELLOW ".
 When they buy a loaf of bread, there are 50 different "words" for each loaf of bread.
 Produce is popular and common, but because there are only about 200 produce items they will always dominate the topics.
-
+<a name="7topicsnoproduce"/>
 ## What happens when we remove the Produce items all together?
 
 Something pretty amazing actually.
@@ -174,7 +188,7 @@ Ignoring any items from the produce department, we get these results:
 | 5150 BRAZIL NUTS   | ESTHERS PRETZELS   | ORGANIC CARROT 16  | PASTURE RAISED EGG | 5150 BRAZIL NUTS   | CALIFIA UNSWT      | 2530 NICOISES OLIV |
 | 3144 OG DR CRANBER | SEMIFREDDIS LOAF   | SUPERFRESH SANDWIC | 5250 ORG PECAN HA  | 4111 CHIA SEEDS    | 3290 THOMPSON RAIS | 2455 OLIVE MEDLEY  |
 | 4125 OG STL CUT OA | TILLY SHARP CHEDDA | PEASANT PIE GARBAN | DAVE'S KILLER      | 3290 THOMPSON RAIS | 5101 ROAST CASHEWS | ACME BAGUETTE      |
-
+<a name="10topicsnoproduce"/>
 ## Without produce, 10 topics looks a little better than 7:
 <img src="./img/2018/1555024265.all9topicscropped.png">
 
@@ -195,3 +209,6 @@ Ignoring any items from the produce department, we get these results:
 | 3144 OG DR CRANBER | SEMIFREDDIS LOAF   | SUPERFRESH SANDWIC | 4111 CHIA SEEDS    | 3290 THOMPSON RAIS | 3110 DRD APPLE     | 2455 OLIVE MEDLEY  | CALIFIA UNSWT      | 3144 OG DR CRANBER | STARTER Pastry     |
 | 5161 CASHEW PIECES | SEMIFREDDIS        | PEASANT PIE GARBAN | 5250 ORG PECAN HA  | 5275 RST PISTACHI  | 5101 ROAST CASHEWS | 2345 SAUERKRAUT AV | CLO UNSALTED BUTTE | 3680 BAKERS CH FLO | BATH & BODY        |
 | 3486 SLICED ALMOND | KITE HILL CHIVE    | peasant pie-lentil | 4105 QUICK OATS    | 3125 TURK APRICOT  | 3144 OG DR CRANBER | COWGIRL MT TAM     | ORGANIC 2% MILK    | 5150or BRAZIL NUTS | SEMIFREDDIS LOAF   |
+
+<a name="takeaways"/>
+# Takeaways
