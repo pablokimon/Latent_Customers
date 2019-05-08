@@ -1,4 +1,11 @@
 # Reverse Engineering Shopping Lists 
+
+##### Table of Contents  
+[The Problem](#theproblem)  
+[Emphasis](#emphasis)   
+
+
+<a name="theproblem"/>
 # The Problem: How can a grocery store analyze their customer's shopping without a loyalty program?
 
 A large Bay-Area Natural Food store doesn’t have a method to analyze their customer's baskets.
