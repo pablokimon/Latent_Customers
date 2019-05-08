@@ -31,38 +31,38 @@ Is there a way to find some patterns of shopping in this run-on stream of text?
 
 ## Hello Non-Negative Matrix Factorization!
 
-[NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) is an unsupervised learning model that can be used to find topic similiarity between documents based on the words they contain. Treating each transaction as a document and each item's **unique 13 character description** as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
+[NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) is an unsupervised learning model that can be used to find topic similarity between documents based on the words they contain. Treating each transaction as a document and each item's **unique 13 character description** as a word I will discover the latent dimensions of shopping baskets hidden in this history of purchases.
  
 ## Step 1. Parse the Data
 
-Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formated text file.  I also had to account for stray punctuation characters in the item descriptions.
+Using a regex file I found on the web, i modified it to parse the transactionlog.txt ('tlogs') into useable elements. Date, time, total, cashier, lane, items, price and department code were all waiting to be pulled from a consistently formatted text file.  I also had to account for stray punctuation characters in the item descriptions.
 Writing the results into a json format allowed for them to be quickly read into a pandas dataframe. See the [makeJSONS.py](https://github.com/pablokimon/latent_customers/blob/master/src/makeJSONS.py) file.
 
 ## Step 2. Prepare the Item List and Dictionary
 
 For the results below, I used all the transaction data from 2018, over 800,000 rows containing 30,000 unique items. All the following steps can be executed with the [latent_customers.py](https://github.com/pablokimon/latent_customers/blob/master/src/latent_customers.py) file.
-The item data was extracted as a list of list which I iterated through, adding the item to a dictionary with a running count of the items, ultimately yielding a dictionary of all the items in the all the baskets, and their total count.  I developed a "stop words" list to remove common items which made basket similarites worse. Bag Credits and bottle deposits were linking too many baskets because they were present in many baskets but were not actual items that lend any insight into shopping habits.  
+The item data was extracted as a list of list which I iterated through, adding the item to a dictionary with a running count of the items, ultimately yielding a dictionary of all the items in the all the baskets, and their total count.  I developed a "stop words" list to remove common items which made basket similarities worse. Bag Credits and bottle deposits were linking too many baskets because they were present in many baskets but were not actual items that lend any insight into shopping habits.  
 
 NOTE: Bananas were in 112832 of the 831284 baskets, roughly 1 in 8 baskets, or 13.5% of transactions and Hass Avocados were in 10% of baskets.
-Removing both of these items allowed a greater differentiation between baskets. The next most prevelant item was "YELLOW ONIONS" which were in only ~7% of baskets and did not adversely affect results.
+Removing both of these items allowed a greater differentiation between baskets. The next most prevalent item was "YELLOW ONIONS" which were in only ~7% of baskets and did not adversely affect results.
 
-## Step 3. Builing a Sparse Matrix
+## Step 3. Building a Sparse Matrix
 
-Because I needed the items descriptions to remain entact at the entire 13-character string, I built my own vectorizer. Each time an item was present in the basket, I added 1 for that item, for that transaction. If the value was negative (such as a voided item) I subtracted 1 for that item, for that transaction. This accounted for an item being rung up twice and voided once, for example. Iterating through the lists of transactions and adding a dicitonary key for the row (transaction) and a tuple of the item and its count in the basket I built up a dictionary object which was then passed to a sparse matrix.
+Because I needed the items descriptions to remain intact at the entire 13-character string, I built my own vectorizer. Each time an item was present in the basket, I added 1 for that item, for that transaction. If the value was negative (such as a voided item) I subtracted 1 for that item, for that transaction. This accounted for an item being rung up twice and voided once, for example. Iterating through the lists of transactions and adding a dictionary key for the row (transaction) and a tuple of the item and its count in the basket I built up a dictionary object, which was then passed to a sparse matrix.
 
 ## Step 4. Pass the Matrix to the NMF Model
 
 Just before passing this sparse matrix to the NMF model, I set any negative values to 0. After choosing a value for the number of components (topics) and maximum iterations I let the NMF work its magic.  I returned from the model the number of iterations the model used to achieve the number of components specified, and the decomposed matrices W(rows of transactions, columns of topics) and H (rows of topics, columns of items).
 
-## Step 5. Interpretting the model.
+## Step 5. Interpreting the model.
 
-The values in W and H represent that item or transactions assocation or weight to that topic. The higher the number, the more weight that item or transaction contributes to that topic. Sorting these in descending order shows up the most related items and transactions for each topic.
+The values in W and H represent that item or transactions association or weight to that topic. The higher the number, the more weight that item or transaction contributes to that topic. Sorting these in descending order shows up the most related items and transactions for each topic.
 
 ## Step 6. What is the best number of topics?
 
-To evaluate or score a topic modeler, we can compare the dot product of the resulting matrices W and H against the original matrix and evaluate the differences. With this specific type of data, increasing topics continued to slowly score better and better but the actual results of the increase topics were not an improvement, they got worse. By 10 topics, the top items were so blended between different topics that they were not easily differentiable. I settled on 7 topics for this data set and I encourage you to evalute the number of components with math and your eye.
+To evaluate or score a topic modeler, we can compare the dot product of the resulting matrices W and H against the original matrix and evaluate the differences. With this specific type of data, increasing topics continued to slowly score better and better but the actual results of the increase topics were not an improvement, they got worse. By 10 topics, the top items were so blended between different topics that they were not easily differentiable. I settled on 7 topics for this data set and I encourage you to evaluate the number of components with math and your eye.
 
-## Step 7. Interperting the results.
+## Step 7. Interpreting the results.
 
 Well it turned out I was not finding the customer types as I set out to, but I did discover these shopping dimensions, these grocery vectors that baskets can align along. When people go shopping, it is often with a specific, similar and repeated purpose. People shop for ingredients to make: soup, salsa and salad.
 
@@ -103,17 +103,17 @@ Etc...
 
 People tend to do shopping trips for produce to cook apart from trips of fruit, salad and bagels which don't need to be cooked.
 
-## Spliting into 7 groups we find:
+## Splitting into 7 groups we find:
 
 Seven groups gives us some pretty clear types of shopping trips:
 <p>
-<img src="./img/2018/1554759052.topic0.png" width="150"/>
-<img src="./img/2018/1554759053.topic1.png" width="150"/>
-<img src="./img/2018/1554759053.topic2.png" width="150"/>
-<img src="./img/2018/1554759054.topic3.png" width="150"/>
-<img src="./img/2018/1554759054.topic4.png" width="150"/>
-<img src="./img/2018/1554759055.topic5.png" width="150"/>
-<img src="./img/2018/1554759056.topic6.png" width="150"/>
+<img src="./img/2018/1554759052.topic0.png" width="100"/>
+<img src="./img/2018/1554759053.topic1.png" width="100"/>
+<img src="./img/2018/1554759053.topic2.png" width="100"/>
+<img src="./img/2018/1554759054.topic3.png" width="100"/>
+<img src="./img/2018/1554759054.topic4.png" width="100"/>
+<img src="./img/2018/1554759055.topic5.png" width="100"/>
+<img src="./img/2018/1554759056.topic6.png" width="100"/>
  </p>
  
 | Stir-Fry Basket 59% | The Fruit Basket 8% | The Soup Basket 4% | Stir-Fry 2 Basket 6% |  The Kale Basket 7% | The Salad Basket 5%  | The Salsa Basket 11%  |
@@ -137,7 +137,7 @@ Seven groups gives us some pretty clear types of shopping trips:
 
 ## But why is produce dominating the topics? What happened to all the other 30,000 items?
 
-When someone buys a yellow onion there is one one word for yellow onion: "ONIONS YELLOW ".
+When someone buys a yellow onion there is one word for yellow onion: "ONIONS YELLOW ".
 When they buy a loaf of bread, there are 50 different "words" for each loaf of bread.
 Produce is popular and common, but because there are only about 200 produce items they will always dominate the topics.
 
