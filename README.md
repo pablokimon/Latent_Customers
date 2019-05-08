@@ -107,13 +107,13 @@ People tend to do shopping trips for produce to cook apart from trips of fruit, 
 
 Seven groups gives us some pretty clear types of shopping trips:
 <p>
-<img src="./img/2018/1554759052.topic0.png" width="100"/>
-<img src="./img/2018/1554759053.topic1.png" width="100"/>
-<img src="./img/2018/1554759053.topic2.png" width="100"/>
-<img src="./img/2018/1554759054.topic3.png" width="100"/>
-<img src="./img/2018/1554759054.topic4.png" width="100"/>
-<img src="./img/2018/1554759055.topic5.png" width="100"/>
-<img src="./img/2018/1554759056.topic6.png" width="100"/>
+<img src="./img/2018/1554759052.topic0.png" width="150"/>
+<img src="./img/2018/1554759053.topic1.png" width="150"/>
+<img src="./img/2018/1554759053.topic2.png" width="150"/>
+<img src="./img/2018/1554759054.topic3.png" width="150"/>
+<img src="./img/2018/1554759054.topic4.png" width="150"/>
+<img src="./img/2018/1554759055.topic5.png" width="150"/>
+<img src="./img/2018/1554759056.topic6.png" width="150"/>
  </p>
  
 | Stir-Fry Basket 59% | The Fruit Basket 8% | The Soup Basket 4% | Stir-Fry 2 Basket 6% |  The Kale Basket 7% | The Salad Basket 5%  | The Salsa Basket 11%  |
