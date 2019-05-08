@@ -2,14 +2,15 @@
 
 ##### Table of Contents  
 [The Problem](#theproblem)  
-[The Solution](#thesolution)   
+[The Solution](#thesolution) 
+
 [Step 1. Parse the Data](#step1)    
 [Step 2. Prepare the Item List and Dictionary](#step2)        
 [Step 3. Building a Sparse Matrix](#step3)    
-[Step 4. Pass the Matrix to the NMF Model](step4)    
+[Step 4. Pass the Matrix to the NMF Model](#step4)    
 [Step 5. Interpreting the model](#step5)    
 [Step 6. What is the best number of topics?](#step6)    
-[Step 7. Interpreting the results](#step7)    
+
 [Results](#results)    
 [2 Topics](#2topics)    
 [7 Topics](#7topics)    
@@ -82,15 +83,15 @@ The values in W and H represent that item or transactions association or weight 
 ## Step 6. What is the best number of topics?
 
 To evaluate or score a topic modeler, we can compare the dot product of the resulting matrices W and H against the original matrix and evaluate the differences. With this specific type of data, increasing topics continued to slowly score better and better but the actual results of the increase topics were not an improvement, they got worse. By 10 topics, the top items were so blended between different topics that they were not easily differentiable. I settled on 7 topics for this data set and I encourage you to evaluate the number of components with math and your eye.
-<a name="step7"/>
-## Step 7. Interpreting the results
 
-Well it turned out I was not finding the customer types as I set out to, but I did discover these shopping dimensions, these grocery vectors that baskets can align along. When people go shopping, it is often with a specific, similar and repeated purpose. People shop for ingredients to make: soup, salsa and salad.
 <a name="results"/>
 
 # Results
 
+Well it turned out I was not finding the customer types as I set out to, but I did discover these shopping dimensions, these grocery vectors that baskets can align along. When people go shopping, it is often with a specific, similar and repeated purpose. People shop for ingredients to make: soup, salsa and salad.
+
 <a name="2topics"/>
+
 ## Two Topics: People Who Cook and People Who Don't.
 
 When I set the model to only sort into two topics, I found:
