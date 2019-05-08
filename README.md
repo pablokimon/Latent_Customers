@@ -87,7 +87,9 @@ To evaluate or score a topic modeler, we can compare the dot product of the resu
 
 Well it turned out I was not finding the customer types as I set out to, but I did discover these shopping dimensions, these grocery vectors that baskets can align along. When people go shopping, it is often with a specific, similar and repeated purpose. People shop for ingredients to make: soup, salsa and salad.
 <a name="results"/>
+
 # Results
+
 <a name="2topics"/>
 ## Two Topics: People Who Cook and People Who Don't.
 
@@ -190,8 +192,11 @@ Ignoring any items from the produce department, we get these results:
 | 5150 BRAZIL NUTS   | ESTHERS PRETZELS   | ORGANIC CARROT 16  | PASTURE RAISED EGG | 5150 BRAZIL NUTS   | CALIFIA UNSWT      | 2530 NICOISES OLIV |
 | 3144 OG DR CRANBER | SEMIFREDDIS LOAF   | SUPERFRESH SANDWIC | 5250 ORG PECAN HA  | 4111 CHIA SEEDS    | 3290 THOMPSON RAIS | 2455 OLIVE MEDLEY  |
 | 4125 OG STL CUT OA | TILLY SHARP CHEDDA | PEASANT PIE GARBAN | DAVE'S KILLER      | 3290 THOMPSON RAIS | 5101 ROAST CASHEWS | ACME BAGUETTE      |
+
 <a name="10topicsnoproduce"/>
+
 ## Without produce, 10 topics looks a little better than 7:
+
 <img src="./img/2018/1555024265.all9topicscropped.png">
 
 | Bulk nuts and seeds 5%              | Bagel and Cream Cheese 3%               | Ready to eat meals 3%               | Oats seeds and spice 24%               | Nuts and seeds 2%               | Dried Fruit 2%              | Olive Bar 2%               | Milk, eggs, butter and cheese 57%               | Oats, beans and raisins 1%               | Morning pastry 2%               |
@@ -213,4 +218,5 @@ Ignoring any items from the produce department, we get these results:
 | 3486 SLICED ALMOND | KITE HILL CHIVE    | peasant pie-lentil | 4105 QUICK OATS    | 3125 TURK APRICOT  | 3144 OG DR CRANBER | COWGIRL MT TAM     | ORGANIC 2% MILK    | 5150or BRAZIL NUTS | SEMIFREDDIS LOAF   |
 
 <a name="takeaways"/>
+
 # Takeaways
