@@ -1,21 +1,22 @@
 # Reverse Engineering Shopping Lists 
 
 ##### Table of Contents  
-[The Problem](#theproblem)  
-[The Solution](#thesolution) 
+* [The Problem](#theproblem)  
+* [The Solution](#thesolution) 
 
-[Step 1. Parse the Data](#step1)    
-[Step 2. Prepare the Item List and Dictionary](#step2)        
-[Step 3. Building a Sparse Matrix](#step3)    
-[Step 4. Pass the Matrix to the NMF Model](#step4)    
-[Step 5. Interpreting the model](#step5)    
-[Step 6. What is the best number of topics?](#step6)    
+### How to:
+* [Step 1. Parse the Data](#step1)    
+* [Step 2. Prepare the Item List and Dictionary](#step2)        
+* [Step 3. Building a Sparse Matrix](#step3)    
+* [Step 4. Pass the Matrix to the NMF Model](#step4)    
+* [Step 5. Interpreting the model](#step5)    
+* [Step 6. What is the best number of topics?](#step6)    
 
 [Results](#results)    
-[2 Topics](#2topics)    
-[7 Topics](#7topics)    
-[7 Topics no produce](#7topicsnoproduce)    
-[10 Topics no produce](#10topicsnoproduce)   
+* [2 Topics](#2topics)    
+* [7 Topics](#7topics)    
+* [7 Topics no produce](#7topicsnoproduce)    
+* [10 Topics no produce](#10topicsnoproduce)   
 
 [Takeaways](#takeaways)    
 
@@ -27,7 +28,6 @@ A large Bay-Area Natural Food store doesn’t have a method to analyze their cus
 They have been a fixture of San Francisco since 1975 and have a register system designed in the 80's.
 
 * $1,000,000 in sale per week
-* 25,000 square foot
 * maintains a selection of 30,000 items
 * 2000-3000 customer per day
 * no loyalty program 
