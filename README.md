@@ -223,3 +223,25 @@ Ignoring any items from the produce department, we get these results:
 <a name="takeaways"/>
 
 # Takeaways
+
+NMF does any pretty good job of organizing the transactions based on items bought together. The model's ability to find the themes of "Salsa Basket" and "Soup Basket" were pretty surprising. Even the intial 2 groups resulting in the classes: "People who Cook" and "People who don't Cook" was profound. All of this from just the 13-character description of the items.
+
+The store can continue to explore this information to influence marketing, purchasing and merchandising decisions:
+
+* Display items bought together near each other for convenience
+* Or separate items to encourage visiting more of the store
+* Offer coupons for items infrequently bought together
+* Different shopping trips have different purposes
+
+# Next Steps
+
+After sharing this initial information with the store, I'd like to take their feedback and design a dashboard for them to further explore this information. 
+In addition, this project has only just cacked open the data contained in the transaction logs and allows me to:
+
+* Analyse basket trends over multiple years
+* Finds themes between different groups of baskets sizes
+* Explore the other information available besides basket contents:
+** Observe trends over time of day, day of week, months, years
+** Cashier and lane preference and efficiency
+** Variance of Shopping Lists over time (are some days more “Soup Shopping” than other days?)
+** Using last 4 of credit card to attempt to identify individual customers
