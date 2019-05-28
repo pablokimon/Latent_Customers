@@ -241,7 +241,7 @@ In addition, this project has only just cacked open the data contained in the tr
 * Analyse basket trends over multiple years
 * Finds themes between different groups of baskets sizes
 * Explore the other information available besides basket contents:
- * Observe trends over time of day, day of week, months, years
- * Cashier and lane preference and efficiency
- * Variance of Shopping Lists over time (are some days more “Soup Shopping” than other days?)
- * Using last 4 of credit card to attempt to identify individual customers
+  * Observe trends over time of day, day of week, months, years
+  * Cashier and lane preference and efficiency
+  * Variance of Shopping Lists over time (are some days more “Soup Shopping” than other days?)
+  * Using last 4 of credit card to attempt to identify individual customers
